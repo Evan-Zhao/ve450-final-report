@@ -1,11 +1,35 @@
 \begin{enumerate}
     \item \textbf{Packages Incompatible}. \\
-    We use Python3 as our programming language in our project, which requires lots of third-party packages. However, lots of those packages also have their own dependencies and thus may cause the management of dependencies chaotic. In case this happens, we need first identify which two packages are conflicted, then we should minimize the installed packages if possible. 
+    We use Python3 as our programming language in our project, which requires
+lots of third-party packages. However, lots of those packages also have their
+own dependencies and thus may cause the management of dependencies chaotic. In
+case this happens, we need first identify which two packages are conflicted,
+then we should minimize the installed packages if possible.
     \item \textbf{Cost of loading model}. \\
-    The size of our model is over 100M, therefore it takes some time to load the model before preprocessing the images, which may reduce the efficiency of our annotation tool. To avoid this possible problem, we can add the logic that our tool can automatically load model once it starts. Especially with our online server, we could create a pipelining mechanism, where the server will automatically process the unlabeled image before the clients download them. We use the LRU (least recently used) principle to decide on which image the user is most likely to label next, thus creating less waiting overhead.
-    
-    \item \textbf{Conflict of manual labels} \\ As shown in  \ref{fig:Manu_FlowChart}, it is very likely that multiple users will download a same image and adjust the labels at the same time. If they then upload them, it will cause conflicts.   In order to reduce the potential conflicts, we create a "dirty bit" for the pictures that's being modified and lock that picture. In order to prevent from malicious users from occupying a picture for too long, we also set a \texttt{Timeout} threshold. Other potential solutions includes allowing multiple users to modify the same image at the same time, showing there cursors on the UI. 
-    
-    \item \textbf{Inability to detect traffic signs based on current models} We found that YOLOv3 has problems on detecting traffic signs except stop signs. Hence, it will add lots of manual labor. In order to further reduce the manual labor, we create a new model for traffic sign recognition. Other potential solutions include retraining the YOLOv3 based on new self-generated dataset with more traffic signs. 
+    The size of our model is over 100M, therefore it takes some time to load
+the model before preprocessing the images, which may reduce the efficiency of
+our annotation tool. To avoid this possible problem, we can add the logic that
+our tool can automatically load model once it starts. Especially with our
+online server, we could create a pipelining mechanism, where the server will
+automatically process the unlabeled image before the clients download them. We
+use the LRU (least recently used) principle to decide on which image the user
+is most likely to label next, thus creating less waiting overhead.
+
+    \item \textbf{Conflict of manual labels} \\ As shown in
+\ref{fig:Manu_FlowChart}, it is very likely that multiple users will download a
+same image and adjust the labels at the same time. If they then upload them, it
+will cause conflicts.   In order to reduce the potential conflicts, we create a
+"dirty bit" for the pictures that's being modified and lock that picture. In
+order to prevent from malicious users from occupying a picture for too long, we
+also set a \texttt{Timeout} threshold. Other potential solutions includes
+allowing multiple users to modify the same image at the same time, showing
+there cursors on the UI.
+
+    \item \textbf{Inability to detect traffic signs based on current models} We
+found that YOLOv3 has problems on detecting traffic signs except stop signs.
+Hence, it will add lots of manual labor. In order to further reduce the manual
+labor, we create a new model for traffic sign recognition. Other potential
+solutions include retraining the YOLOv3 based on new self-generated dataset
+with more traffic signs.
 
 \end{enumerate}
