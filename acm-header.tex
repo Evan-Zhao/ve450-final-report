@@ -1,0 +1,20 @@
+%%%% Generic manuscript mode
+\documentclass[manuscript, screen, 12pt]{acmart}
+\settopmatter{printacmref=false}
+\makeatletter
+\@ACM@nonacmtrue
+\makeatother
+
+\usepackage{geometry}
+\geometry{twoside=false, top=1in, bottom=1in, left=1in, right=1in}
+
+\usepackage{tabularx}
+\usepackage{makecell}
+\graphicspath{{./figures/}}
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+ % Removes citation information below abstract
+\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
