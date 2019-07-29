@@ -15,11 +15,6 @@ In this part, knowledge in deep learning and machine learning is required. Basic
 
 \begin{enumerate}
     \item \textbf{Object detection} In object detection, we choose a state-of-the-art model: You Only Look Once(YOLO)\cite{Redmon2018YOLOv3}. It can detect the 20 Pascal object classes: person, cow, dog, horse, sheep, bicycle, boat, bus, car, motorbike, train, bottle, chair, dining table, potted, plant, sofa, tv monitor. 
-    
-%     A single convolutional network simultaneously predicts multiple bounding boxes and class probabilities for
-% those boxes. YOLO trains on full images and directly optimizes detection performance.
-
-
 
 The reason for choosing the threshold, i.e. confidence level as $60\%$ is due to our requirement to reduce false positives. We have done experiments over a number of parameters on the given dataset to make sure that all objects in our data are detected without creating too many false positives. The criteria we used to help with the decision
 
@@ -46,8 +41,6 @@ There are also several other parameters for tuning while training:
 In this part, the related field is human computer interaction (HCI). Experience in graphical interface and website design is needed. 
 
 \subsection{Design Description}
-% \yueying{Software projects are required to explain their projects in sub-function using animations or flow charts if necessary. It should not only be clear what the final design is, but how it can be made, how it will work, and why it will work. List all parts used and their cost. In short, the description should be detailed enough for another team to build the final prototype, using this report as a reference. 
-% }
 
 In this part, we introduce the design of each component in the system before delving into some notable design details. At the top level, the labelling system consists of 3 subsystems:
 \begin{itemize}
@@ -65,14 +58,14 @@ Fig. \ref{fig:structure_gui} renders a component breakdown of our GUI subsystem,
 
 \begin{figure}[htbp!]
     \centering
-    \includegraphics[width=\textwidth]{figures/structure1.png}
+    \includegraphics[width=\textwidth]{structure1.png}
     \caption{Component structure of GUI subsystem.}
     \label{fig:structure_gui}
 \end{figure}
 
 \begin{figure}[htbp!]
     \centering
-    \includegraphics[width=\textwidth]{figures/look.png}
+    \includegraphics[width=\textwidth]{look.png}
     \caption{Appearance of some GUI components.}
     \label{fig:look_gui}
 \end{figure}
@@ -87,7 +80,7 @@ In Fig. \ref{fig:fsm_gui}, states are displayed as rectangles; a list of operati
 
 \begin{figure}[htbp!]
     \centering
-    \includegraphics[width=\textwidth]{figures/fsm1.png}
+    \includegraphics[width=\textwidth]{fsm1.png}
     \caption{FSM representation of GUI subsystem.}
     \label{fig:fsm_gui}
 \end{figure}
@@ -96,7 +89,7 @@ In Fig. \ref{fig:fsm_gui}, states are displayed as rectangles; a list of operati
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{figures/fsm2.png}
+    \includegraphics[width=\textwidth]{fsm2.png}
     \caption{FSM representation of dataset server subsystem.}
     \label{fig:fsm_server}
 \end{figure}
@@ -111,7 +104,7 @@ The behavior of dataset server is given in Fig. \ref{fig:fsm_server}. Notations 
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{figures/interaction.png}
+    \includegraphics[width=\textwidth]{interaction.png}
     \caption{Interaction between server and clients.}
     \label{fig:interaction}
 \end{figure}
@@ -155,8 +148,6 @@ The architecture includes the following pipelines, which is also summarized in F
 
 
 \subsection{Manufacturing Plan}
-% \yueying{Analog to the mechanical processes, describe detailed flow charts if the core of one project is about programming and simulation. Algorithms should still be explained in detail. Please list the programming language or software and the existing source codes or libraries you are going to use.
-% }
 For this project, we use Python3 as our programming language. Fig.\ref{fig:Manu_FlowChart} is the detailed flow chart of our project.
 \begin{figure}[h!]
   \centering \includegraphics[width=\linewidth]{manufacture.png}

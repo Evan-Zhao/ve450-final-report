@@ -1,34 +1,3 @@
-% \subsection{Project Background}
-% Our sponsor, HongJing Drive Inc., is a company focusing on full stack supply of autonomous driving. Autonomous driving systems face a multitude of decision problems, including trajectory prediction, motion planning and vehicle control. Using various sensor inputs from cameras, LiDars, and radar, autonomous driving systems are able to identify surrounding objects and make those decisions. Deep learning methods often prove effectiveness for these decision problems. When properly trained with high-quality annotated datasets, deep learning models often yield accurate results that outperform rule-based approaches.
-
-% Our software, therefore, aims to provide the tool for producing a large dataset, and thus would help the development of better deep learning models and algorithms. It can be extended to different scenes. 
-
-% Using various cameras and other sensors, autonomous driving systems need to identify the objects and anticipate their movement from information obtained by various cameras on the car. The key to high accuracy in identifying the objects is to train a deep learning model with sufficient annotated images as training data sets. Thus, there is a great demand for efficiently producing data sets.
-
-
-
-% \subsection{Tool Functionalities}
-% Overall, we implement a fully functional semi-automatic annotation tool. It can provide flexible methods for easing the post inspection and correcting. Besides, our tool can provide the following functionalities: 
-% \begin{enumerate}
-%     \item \textcolor{gray}{Attributes such as occluded, truncated are included in our labels. }
-%     \item \textcolor{gray}{Different traffic signs, lights, car lines can be identified with our deep learning models.}
-%     \item \textcolor{gray}{Pedestrian are identified with their pose labeled. These labels also include the attributes such as occluded, non-occluded, not-in-picture, etc.}
-%     \item \textcolor{gray}{Some additional user-friendly features are introduced:} \begin{itemize}
-%         \item \textcolor{gray}{Inverse-selection of the polygon region to be labeled.}
-%         \item \textcolor{gray}{Move/Zoom-in the pictures}
-%         \item \textcolor{gray}{Match the labels in the pictures with the polygons}
-%         \item \textcolor{gray}{Copy and paste between the pictures.}
-%         \item \textcolor{gray}{Color differentiation of different label types}
-%         \item \textcolor{gray}{Transparency of the irrelevant objects when labeling a specific object. }
-%     \end{itemize}  
-%     \item \textcolor{gray}{Data can be uploaded and the tool can be used online for safer data transaction.}
-%     \item \textcolor{gray}{All the output are in a \texttt{.json} format, specifying location, category, attributes, for better future training of deep learning models.}
-    
-%     \item The annotation tool is deployed online. Based on the automatic generated preprocessing outcome, multiple users can do the manual correction at the same time without conflict. Our work here is to port our GUI in the second part to the web frontend and establish a backend database and computing logic to perform the automated annotation.
-% \end{enumerate}
-
-
-
 \subsection{Novelty and Main Contributions}
 The novelty of our project is as follows:
 \begin{enumerate}
@@ -49,6 +18,3 @@ The novelty of our project is as follows:
 \subsubsection{Anno-Mage}
 
 \textcolor{gray}{\textit{Anno-Mage}\cite{annomage} is a light-weight semi-automated annotation tool. It provides a simple and neat GUI with differently colored suggestions. But the DNN models it supports are not adequate for annotation for autonomous driving. It only supports 80 class objects from the \textit{MS COCO} dataset using a pretrained RetinaNet mode.}
-
-
-

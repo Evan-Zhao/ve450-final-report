@@ -1,12 +1,6 @@
 \subsection{Image Processing}
 We mainly take into account two aspects when choosing the concept for image processing: precision and adaptability. According to our customer requirements, we need to reach high efficiency in annotation for autonomous driving scene. An accurate annotation hint during preprocessing will improve a lot in the overall labeling efficiency. Besides, in autonomous driving scene we may have images with various complex conditions, so we need the image processing process to have a high adaptability to work well in different conditions. Since we are not restrained in computing resources, and it is less possible that computation time becomes the critical path in our interacting system, we do not require our concept to be computational efficient. Based on the concept generation in section 5, we have 3 possible approaches:
 
-% \yueying{Describe the methods used to select the chosen concept. In most cases, concept selection and scoring matrices should be used. In the main text show in detail the selection methods for at least your top five concepts and put the rest of the details in an appendix. Be sure to discuss the advantages and disadvantages of the top five concepts. Make a strong objective argument why the concept you have chosen is best (with respect to the customer specifications and engineering requirements).}
-% \yueying{At least five}
-% \yueying{need to have the scoring matrices} 
-
-
-
 \begin{enumerate}
     \item Deep learning: using deep neural network models to detect and classify objects
         \begin{itemize}
@@ -65,9 +59,6 @@ By comparison, deep learning stands out in precision and adaptability when compa
 \end{table}
 
 \subsection{Major Deep Learning Architectures Selection}
-% \subsubsection{Preprocessing}
-% The preprocessing part of the deep learning model consists of five stages. The major reason for the preprocessing is: 
-
 For the deep learning models, we are primarily trading off between Bounding Box accuracy, class prediction accuracy, inference speed, model recall rate, and false positive rate. We put extra weight on the inference speed, since it is our major requirement for labeling efficiency.  Based on that, we figured out a plot as shown in Fig. \ref{fig:yolo_comp}. Besides, we took into consideration the following factors when doing concept selection: 
 
 
@@ -154,8 +145,6 @@ The seminal work of Zhe Cao et al. \cite{Cao2016Realtime} used Pars Affinity Fie
 \end{table}
 
 From the table of comparison, we can clearly see that PAF offers an advantage over the traditional top-down approaches, especially under occluded scenario and multi-person scenes, which is suitable for our design concept. 
-
-% \subsection{Traffic Sign Classification}
 
 \subsection{GUI Design}
 We mainly take into account three aspects when choosing the concept for GUI Design: portability, usability and existence of similar software. Based on our requirements, we need to produce both a standalone software and an online deployment. We also need to implement various functions in GUI to ease the users during the annotation process, so we would like our GUI library to provide convenience in implementation. High portability means that less efforts are needed when deploying our standalone software online. If there are existing open source software with similar functionality using a certain library, we can build our software upon it and save much effort. Usability mainly consists of a steady learning curve and a powerful API that can boost coding efficiency. Among the three candidates, Qt and WxWidgets have a high portability between various platforms and programming languages. We can find existing software using Qt and Tk library. Qt has its own developing environment that can ease the process of coding and Tk has a powerful API. Since Qt satisfies all of our requirements, we select it as our concept for GUI Design. We summarize the selection process in the scoring matrix (Table \ref{tab:SelectionUI}).
