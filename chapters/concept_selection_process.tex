@@ -15,14 +15,14 @@ section 5, we have 3 possible approaches:
     \item Deep learning: using deep neural network models to detect and
 classify objects
         \begin{itemize}
-            \item[$\blacktriangleright$] \textbf{Advantages}
+            \item \textbf{Advantages}
                 \begin{itemize}
                     \item High Accuracy. The accuracy of a well-trained model
 can reach 95\% in a similar task like object detection.
                     \item High Adaptability. Deep learning works well even in
 complex environments such as nighttime or heavy traffic.
                 \end{itemize}
-            \item[$\blacktriangleright$] \textbf{Disadvantages}
+            \item \textbf{Disadvantages}
                 \begin{itemize}
                     \item Time and resource consuming. Training a neural
 network from the very beginning requires hardware and takes a lot of time to
@@ -37,14 +37,14 @@ adding more classes to detect requires relabeling dataset and retraining.
     \item Traditional Machine Learning: using SVM and other traditional ML
 techniques
         \begin{itemize}
-            \item[$\blacktriangleright$] \textbf{Advantages}
+            \item \textbf{Advantages}
                 \begin{itemize}
                     \item Adaptability. It can be used even when images has
 been scaled or rotated.
                     \item Fast training. Compared to deep learning, limited
 parameters are involved in training, thus reducing the training time.
                 \end{itemize}
-            \item[$\blacktriangleright$] \textbf{Disadvantages}
+            \item \textbf{Disadvantages}
                 \begin{itemize}
                     \item Not very accurate. Especially with a large number of
 classes, the accuracy drops.
@@ -56,11 +56,11 @@ conditions.
         \end{itemize}
     \item Image Processing: using SIFT, HOG techniques
         \begin{itemize}
-            \item[$\blacktriangleright$] \textbf{Advantages}
+            \item \textbf{Advantages}
                 \begin{itemize}
                     \item No training needed. The algorithm can work instantly.
                 \end{itemize}
-            \item[$\blacktriangleright$] \textbf{Disadvantages}
+            \item \textbf{Disadvantages}
                 \begin{itemize}
                     \item Require good image quality to get feature keypoints
 to detect.
@@ -129,7 +129,7 @@ performs best in terms of inference time}
 \begin{enumerate}
     \item YOLOv3:
         \begin{itemize}
-            \item[$\blacktriangleright$] \textbf{Advantages}
+            \item \textbf{Advantages}
                 \begin{itemize}
                     \item Relatively high recall rate. The change from
 \texttt{Softmax} to \texttt{Sigmoid} makes the multi-class prediction more
@@ -140,7 +140,7 @@ accuracy requirement.
 using DarkNet as backbone. It is due to its ability to learn the difference
 across scales.
                 \end{itemize}
-            \item[$\blacktriangleright$] \textbf{Disadvantages}
+            \item \textbf{Disadvantages}
                 \begin{itemize}
                     \item Low recall rate when an object is unseenable.
                     \item Lower accuracy for bounding box localization.
@@ -151,7 +151,7 @@ stop signs as traffic signs.
         \end{itemize}
         \item Retina-Net
         \begin{itemize}
-            \item[$\blacktriangleright$] \textbf{Advantages}
+            \item \textbf{Advantages}
                 \begin{itemize}
                     \item Relatively higher accuracy for object classification
 since it is region-based
@@ -159,7 +159,7 @@ since it is region-based
                     \item Higher recall rate when different classes are
 presented.
                 \end{itemize}
-            \item[$\blacktriangleright$] \textbf{Disadvantages}
+            \item \textbf{Disadvantages}
                 \begin{itemize}
                     \item Higher false positive rate.
                     \item Not able to identify human pose, or more detailed
